@@ -1,0 +1,26 @@
+query MonetaryTransactions($input: TransactionsInput!) {
+  transactions(input: $input) {
+    items {
+      id
+      amount
+      type
+      status
+      creationDate
+      postingDate
+      merchantName
+      walletCode
+      last4CardNumber
+      benefitPeriod
+    }
+    filters {
+      types {
+        id
+        title
+      }
+      wallets {
+        id
+        title
+      }
+    }
+  }
+}
